@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espetinho do Seu Zé</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Img/ExpetinhoIcon.png" type="image/x-icon">
 </head>
 <body>
     <header>
-        <img src="/Img/Captura_de_tela_2025-03-17_125630-removebg-preview.png" alt="Logo escrito 'expetinho' e o desenho de três espetos" >
+        <img src="/Img/ExpetinhoIcon.png" alt="Logo escrito 'expetinho' e o desenho de três espetos" >
        
         <nav class="navbar">
             <div class="nav-list" id="nav-list">
@@ -25,12 +26,78 @@
 
     </header>
     <section class='banner'>
+      <!-- Banner -->
     </section> 
     <main>
+        <!-- Nossos Espetinhos  -->
+        <!-- Kit Churrasco (Banner) -->
+        <!-- Kit churrasco -->
+        <!-- Faça seu pedido -->
+        <div class="form-pedido-container">
+          <form class="form-pedido">
+            <h2>Faça seu pedido</h2>
+            <div class="dados-form">
+              <div class="dado-form">
+                <label for="nome">Nome:</label>
+                <input type="text" id="dado-nome-input" placeholder="Seu nome">
+              </div>
+              <div class="dado-form">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="dado-endereco-input" placeholder="Seu endereço">
+              </div>
+            </div>
+           <div class="opcoes-form">
+            <h3>Opções (unidade)</h3>
+            <div class="opcao-form">
+              <img src="Img/Icones/carne-opcao.svg" alt="">
+              <label for="opcaoCarne"> Carne:</label>
+              <input type="number" id="opcao-carne-input" placeholder="0" min="0">
+            </div>
+            <div class="opcao-form">
+              <img src="Img/Icones/frango-opcao.svg" alt=""> 
+              <label for="opcaoFrango">Frango:</label>
+              <input type="number" id="opcao-frango-input" placeholder="0" min="0">
+            </div>
+            <div class="opcao-form">
+              <img src="Img/Icones/legumes-opcao.svg" alt="">
+              <label for="opcaoLegume">Legume:</label>
+              <input type="number" id="opcao-legume-input" placeholder="0" min="0">
+            </div>
+            <div class="opcao-form">
+              <img src="Img/Icones/linguica-opcao.svg" alt="">
+              <label for="opcaoLinguiça">Linguiça:</label>
+              <input type="number" id="opcao-linguica-input" placeholder="0" min="0">
+            </div>
+           </div>
+
+           <div class="resumo-pedido">
+              <h2>Resumo do pedido:</h2>
+              <div class="resumo-dados-pedido">
+                <span id="resumo-dado-nome" class="resumo-dado">Nome -</span>
+                <span id="resumo-dado-endereco" class="resumo-dado">Endereço -</span>
+              </div>
+              <div class="resumo-opcoes-pedido">
+                  <ul>
+                    <li class="resumo-opcao" id="resumo-opcao-carne">Carne - 0</li>
+                    <li class="resumo-opcao" id="resumo-opcao-frango">Frango - 0</li>
+                    <li class="resumo-opcao" id="resumo-opcao-legume">Legume - 0</li>
+                    <li class="resumo-opcao" id="resumo-opcao-linguica">Linguiça - 0</li>
+                  </ul>
+              </div>
+              <span>Obs: Revisar seu pedido garante que tudo será entregue conforme suas reais necessidades!</span>
+           </div>
+
+           <div class="enviar-form-pedido">
+              <button class="btn-enviar-form-pedido">Enviar</button>
+           </div>
+          </form>
+        </div>
         
+        <!-- Vídeo -->
+        <!-- Seja um revendedor -->
     </main>
     <footer>
-
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

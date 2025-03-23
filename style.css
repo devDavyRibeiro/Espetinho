@@ -1,9 +1,58 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap);
 :root{
+    /* Cores */
     --primary-color: #C90009;
-    --segundary-color:white;
+    /* --primary-color: #a10e15; */
+    --segundary-color:#e2e2e2;
+    --terciary-color: #D9D9D9;
+
+    /* Fontes */
     --fonte-principal: "Poppins";
+    --fonte-cor-principal: #e2e2e2;
+    --fonte-cor-secundaria: #000;
+
+    /* Estilos para o Input */
+    --input-border-radius: 20px;
+    --input-padding: 10px 15px;
+    --input-font-size: 14px;
+
+    /* Estilos para o focus-visible */
+    --outline-focus-visible: 4px solid rgb(196, 165, 165);
+    --border-radius-focus-visible: 15px;
 }
+
+/* *** Globais *** */
+
+*{
+    font-family: var(--fonte-principal);
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Estilos do Input */
+input{
+    font-size: var(--input-font-size);
+    border-radius: var(--input-border-radius);
+    border: none;
+    padding: var(--input-padding);
+    -webkit-box-shadow: 10px 10px 5px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px -10px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px -10px rgba(0,0,0,0.75);
+    transition: .4s border-radius ease;
+}
+
+input:focus-visible{
+    outline: var(--outline-focus-visible);
+    border-radius: var(--border-radius-focus-visible);
+}
+
+
+/* Estilos do Label */
+label{
+    font-weight: 300;
+}
+
+/* *** Header *** */
 
 /*alinhamento do cabeçalho*/
 header{
@@ -51,18 +100,168 @@ nav ul li a:hover {
     color: #C90009;
 }
 
-/*Banner*/
+/* *** Banner inicial ****/
 .banner {
     position: relative;
     width: 100%;
     height: 300px;
-    background: url(/Img/vecteezy_bbq-summer-party-illustration_24399379.jpg) no-repeat center;
+    background: url(/Img/BannerEspetinho.jpg) no-repeat center;
     background-size: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.315);
     margin-top: -10px;
 }
 
-body {
-    margin: 0;
-    padding: 0;
+/* *** Preços *** */
+
+/* *** Kit Chureasco Banner *** */
+
+/* *** Kit Churrasco *** */
+
+/* *** Formulário de Pedidos *** */
+
+.form-pedido-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    color: var(--segundary-color);
+    padding: 30px;
 }
+
+.form-pedido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 2rem;
+}
+
+/* Estilos dos campos de dados (nome e endereço) */
+
+.dados-form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.2rem;
+}
+
+.dado-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.dado-form input{
+    width: 300px;
+}
+
+.dado-form label{
+    width: 80px;
+    text-align: start;
+}
+
+/* Estilos dos campos de opção (frango, carne, legume e linguiça) */
+
+.opcoes-form{
+    display: flex;
+    gap: 0.6rem;
+    flex-direction: column;
+    text-align: center;
+}    
+
+.opcao-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opcao-form img{
+    width: 30px;
+    height: 20px;
+}
+
+.opcao-form label{
+    text-align: start;
+    width: 125px;   
+}
+
+.opcao-form input{
+    width: 110px;
+    text-align: center;
+}
+
+
+
+/* Estilos dos elementos do container de resumo  */
+.resumo-pedido{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    width: 400px;
+    height: auto;
+    padding: 30px;
+    border-radius: 20px;
+    color: #000000;
+    background-color: var(--terciary-color);
+}
+
+.resumo-pedido h2{
+    width: 100%;
+    text-align: center;
+}
+
+.resumo-dados-pedido{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-top: 20px;
+}
+
+.resumo-opcoes-pedido{
+    margin-top: 30px;
+}
+
+.resumo-opcoes-pedido ul{
+    list-style: none;
+}
+
+.resumo-pedido span:not(.resumo-dado){
+    margin-top: 30px;
+    font-size: 11px;
+}
+
+/* Estilos do botão de enviar o form de pedido */
+
+.enviar-form-pedido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-enviar-form-pedido{
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    background-color: var(--segundary-color);
+    color: var(--fonte-cor-secundaria);
+    transition: 0.4s transform ease, .4s border-radius ease;
+}
+
+.btn-enviar-form-pedido:focus-visible{
+    outline: var(--outline-focus-visible);
+    border-radius: var(--border-radius-focus-visible);
+}
+
+.btn-enviar-form-pedido:hover{
+    transform: translateY(-5px);
+}
+/* *** Vídeo *** */
+
+/* *** Formulário de Revendedores *** */
