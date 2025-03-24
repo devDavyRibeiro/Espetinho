@@ -115,12 +115,16 @@ nav ul li a:hover {
     position: relative;
     width: 100%;
     height: 400px;
-    background: url(/Img/BannerEspetinho.jpg) no-repeat center;
     background-size: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.315);
     margin-top: -10px;
 }
-
+.banner img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    
+}
 .titulo-banner{
         font-weight: 700;
         font-size: 32px;
@@ -144,10 +148,15 @@ nav ul li a:hover {
     position: relative;
     width: 100%;
     height: 300px;
-    background: url(/Img/BannerKitChurrasco.jpg) no-repeat center;
     background-size: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.400);
     margin-top: -10px;
+}
+
+.banner-kit-churrasco img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
 }
 
 /* *** Kit Churrasco *** */
