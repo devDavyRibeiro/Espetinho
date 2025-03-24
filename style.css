@@ -114,18 +114,44 @@ nav ul li a:hover {
 .banner {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 400px;
     background: url(/Img/BannerEspetinho.jpg) no-repeat center;
     background-size: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.315);
     margin-top: -10px;
 }
 
+.titulo-banner{
+        font-weight: 700;
+        font-size: 32px;
+        color: white;
+        text-shadow: 8px 8px 10px rgba(0, 0, 0, 0.315);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.315);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;    
+}
+
 /* *** Preços *** */
 
 /* *** Kit Chureasco Banner *** */
+.banner-kit-churrasco {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: url(/Img/BannerKitChurrasco.jpg) no-repeat center;
+    background-size: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.315);
+    margin-top: -10px;
+}
 
 /* *** Kit Churrasco *** */
+
 
 /* *** Formulário de Pedidos *** */
 
