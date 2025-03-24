@@ -303,6 +303,26 @@ nav ul li a:hover {
     transform: translateY(-5px);
 }
 /* *** Vídeo *** */
+.video-container{
+    background-color: var(--terciary-color);
+    color: var(--fonte-cor-secundaria);
+    gap: 1.8rem;
+}
 
+.video-container h2{
+    font-size: 1.3vw;
+}
+
+.video{
+    width: 35vw;    
+}
+
+.video video{
+    outline: 2px solid;
+    border-radius: 20px;
+    -webkit-box-shadow: 50px 10px 5px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px -10px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 10px -10px rgba(0,0,0,0.75);
+}
 
 /* *** Formulário de Revendedores *** */
