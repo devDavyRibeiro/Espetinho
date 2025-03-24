@@ -83,7 +83,7 @@
         </div>
       </section>
         <!-- Faça seu pedido -->
-        <div class="form-pedido-container">
+        <div class="form-pedido-container container">
           <form class="form-pedido">
             <h2>Faça seu pedido</h2>
             <div class="dados-form">
@@ -145,10 +145,31 @@
         </div>
         
         <!-- Vídeo -->
+        <div class="video-container container">
+          <h2>Assista nosso vídeo</h2>
+           <div class="video">
+            <video controls="" width="100%">
+              <source src="Video/Video1.mp4" type="video/mp4">
+              <track src="Video/Video1.mp4" kind="subtitles" srclang="pt" label="Português">
+            </video>
+           </div>
+         </div>
         <!-- Seja um revendedor -->
+
+        <!-- vLibras -->
+        <div vw class="enabled">
+          <div vw-access-button class="active"></div>
+          <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+          </div>
+        </div>
     </main>
     <footer>
     </footer>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
