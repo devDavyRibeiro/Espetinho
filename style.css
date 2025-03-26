@@ -164,20 +164,24 @@ nav ul li a:hover {
     gap: 25px;
     font-size: 20px;
     align-items: center;
-    padding: 10px 25px;
 }
 .nossos-espetinhos .cardapio .produto{
-    width: 100%;
+    width: 90% ;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 1% 5%;
+    align-items: center;
 }
 .nossos-espetinhos .cardapio .produto p span{
     width: 33% ;
 }
-nossos-espetinhos .cardapio .produto p .traco{
+.nossos-espetinhos .cardapio .produto hr{
     width: 34%;
-    border: 5px solid var(--primary-color);
+    border: #a10e15 dashed;
+    flex-grow: .5;
+    height: 0;
+    border-width: 2.5px;
 }
 /* *** Kit Chureasco Banner *** */
 .banner-kit-churrasco {
