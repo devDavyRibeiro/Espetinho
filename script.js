@@ -29,6 +29,22 @@ const valorLinguica = 10.00
 
 let preco
 
+document.addEventListener("keydown", function (event) {
+    if (event.altKey) {
+        switch (event.key) {
+            case "h":
+                window.location.href = "#banner-inicial";
+                break;
+            case "p":
+                window.location.href = "#form-pedido-container"; 
+                break;
+            case "k":
+                window.location.href = "#kit-churrasco"; 
+                break;
+        }
+    }
+});
+
 function alterarResumo() {
     resumoDadoNome.innerHTML = "Nome - " + dadoNomeInput.value;
     resumoDadoEndereco.innerHTML = "Endereco - " + dadoEnderecoInput.value;

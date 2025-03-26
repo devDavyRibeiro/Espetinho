@@ -1,8 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap);
 :root{
     /* Cores */
-    /* --primary-color: #C90009; */
-    --primary-color: #a10e15;
+    --primary-color: #84090F;
     --segundary-color:#e2e2e2;
     --terciary-color: #D9D9D9;
 
@@ -228,12 +227,12 @@ nossos-espetinhos .cardapio .produto p .traco{
 }
 
 
-h4 {
+.kit-box h4 {
     font-weight: 700;
     font-size: 25px;
     text-shadow: 8px 8px 10px rgba(0, 0, 0, 0.100);
 }
-h3{
+.kit-box  h3{
     font-weight: 700;
     font-size: 20px;
     margin-bottom: 10px;
