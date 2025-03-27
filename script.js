@@ -66,3 +66,14 @@ function alterarResumo() {
 function calcularPreco(){
     
 }
+
+let fala;
+    function lerPagina(){
+        let texto = document.body.innerText;
+        fala = new SpeechSynthesisUtterance(texto);
+        fala.lang ="pt-BR"
+        speechSynthesis.speak(fala);
+    }
+    function pararLeitura(){
+        speechSynthesis.cancel();
+    }
