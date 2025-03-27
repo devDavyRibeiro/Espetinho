@@ -72,6 +72,9 @@ header{
     background-color: #FFFFFF;
     font-weight: bold;
     font-family: var(--fonte-principal);
+    position: sticky;
+    z-index: 999;
+    top: 0;
 }
 
 /*tamanho fixo do logo no cabeeçalho*/

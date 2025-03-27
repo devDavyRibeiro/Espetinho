@@ -32,14 +32,17 @@ let preco
 document.addEventListener("keydown", function (event) {
     if (event.altKey) {
         switch (event.key) {
-            case "h":
+            case "1":
                 window.location.href = "#banner-inicial";
                 break;
-            case "p":
-                window.location.href = "#form-pedido-container"; 
+            case "2":
+                window.location.href = "#nossos-espetinhos"; 
                 break;
-            case "k":
+            case "3":
                 window.location.href = "#kit-churrasco"; 
+                break;
+            case "4":
+                window.location.href = "#form-pedido-container"; 
                 break;
         }
     }
