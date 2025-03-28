@@ -144,6 +144,7 @@ nav ul li a:hover {
 /* *** Preços *** */
 
 .nossos-espetinhos{
+    padding-bottom: 50px;
     background-color: var(--primary-color);
     min-height: 300px;
     width: auto;
@@ -167,6 +168,7 @@ nav ul li a:hover {
     gap: 25px;
     font-size: 20px;
     align-items: center;
+    font-weight: bold;
 }
 .nossos-espetinhos .cardapio .produto{
     width: 90% ;
@@ -464,5 +466,57 @@ nav ul li a:hover {
     background-color: #3486e6;;
 }
 
-
-
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px;
+    min-height: 226px;
+    background-color: var(--primary-color);
+    color: var(--fonte-cor-principal);
+}
+footer .nos-conheca, footer .siga-nos{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+footer .nos-conheca .links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 50px;
+}
+footer .nos-conheca .links .group{
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+footer a{
+    color: var(--fonte-cor-principal);
+    text-decoration: none;
+    font-weight:bold ;
+    font-size: 20px;
+    transition: 0.5s;
+}
+footer a:hover{
+    text-decoration: underline;
+    transform: scale(1.09);
+}
+footer .siga-nos{
+    flex-grow: .4;
+}
+footer h2{
+    text-align: center;
+    padding-bottom: 20px;
+}
+footer .rede-social{
+    padding-left: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+footer img{
+    width: 32px;
+}
