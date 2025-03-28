@@ -448,7 +448,7 @@ nav ul li a:hover {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: rgb(54, 70, 246);
+    background-color: #3486e6;
     color: white;
     border: none;
     padding: 15px 20px;
@@ -461,7 +461,7 @@ nav ul li a:hover {
 
 .botao-parar {
     bottom: 80px; 
-    background-color: rgb(54, 70, 246);;
+    background-color: #3486e6;;
 }
 
 
