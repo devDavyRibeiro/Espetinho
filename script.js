@@ -77,3 +77,9 @@ let fala;
     function pararLeitura(){
         speechSynthesis.cancel();
     }
+
+    
+function trocaCor(){
+    document.documentElement.classList.toggle("modo-preto-branco");
+}
+
