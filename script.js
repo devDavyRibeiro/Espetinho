@@ -24,10 +24,10 @@ opcaoLinguicaInput.addEventListener("input", alterarResumo);
 
 let estado = false;
 
-const valorCarne = 10.00
-const valorFrango = 10.00
-const valorLegume = 10.00
-const valorLinguica = 10.00
+const valorCarne = 4.00
+const valorFrango = 3.00
+const valorLegume = 2.50
+const valorLinguica = 3.50
 
 let preco
 
@@ -72,32 +72,37 @@ function alterarResumo() {
 }
 
 function alternarEstadoLeitura() {
-    botao = document.querySelector("button[class='botao-flutuante']");
     estado = !estado
-    let atalho = "(ALt+5)";
     if(!estado){
         pararLeitura();
-        botao.innerHTML = "Ouvir Página" + atalho;
-
     }
     else{
         lerPagina();
-        botao.innerHTML = "Parar Leitura" + atalho;
     }
 }
 
 let fala;
-    function lerPagina(){
-        let texto = document.body.innerText;
-        fala = new SpeechSynthesisUtterance(texto);
-        fala.lang ="pt-BR"
-        speechSynthesis.speak(fala);
-        
-    }
-    function pararLeitura(){
-        speechSynthesis.cancel();
-    }
+let botaoFala = document.querySelector("button[class='botao-flutuante']");
 
+let atalho = "(Alt+5)";
+
+function lerPagina(){
+    let texto = document.body.innerText;
+    fala = new SpeechSynthesisUtterance(texto);
+    fala.lang ="pt-BR"
+    botaoFala.innerHTML = "Parar Leitura" + atalho;
+    speechSynthesis.speak(fala);
+}
+function pararLeitura(){
+    botaoFala.innerHTML = "Ouvir Página" + atalho;
+    speechSynthesis.cancel();
+}
+
+function interromperLeituraParaVideo(){
+    if(estado)
+        estado = !estado;
+    pararLeitura()
+}
     
 function trocaCor(){
     document.documentElement.classList.toggle("modo-preto-branco");
