@@ -14,10 +14,12 @@
         <nav class="navbar">
             <div class="nav-list" id="nav-list">
               <ul>
-                <li class="nav-item"><a>Início</a></li>
-                <li class="nav-item"><a>Espetinhos</a></li>
-                <li class="nav-item" ><a>Kit churrasco</a></li>
-                <li class="nav-item"><a>Pedidos</a></li>
+                <li class="nav-item"><a href="#">Início(Alt+1)</a></li>
+                <li class="nav-item"><a href="#nossos-expetinhos">Espetinhos (Alt+2)</a></li>
+                <li class="nav-item" ><a href="#banner-kit-churrasco">Kit churrasco(Alt+3)</a></li>
+                <li class="nav-item"><a href="#form-pedido-container">Pedidos(Alt+4)</a></li>
+                <li><button onclick="trocaCor()" class="botao-preto-branco">Modo preto e branco</button></li>
+                <li><button class="botao-flutuante" onclick="alternarEstadoLeitura()">Ouvir Página(Alt+5)</button></li>
               </ul>
             </div>
           </nav>
@@ -32,8 +34,8 @@
     </section> 
     <main>
         <!-- Nossos Espetinhos  -->
-        <section id="nossos-espetinhos" class="nossos-espetinhos container">
-          <h2>Nossos Espetinhos</h2>
+        <section id="nossos-expetinhos" class="nossos-espetinhos container">
+          <h2>Nossos Expetinhos</h2>
           <div class="cardapio">
             <div class="produto">
               <span>Carne Bovina</span>
@@ -59,7 +61,7 @@
           </div>
         </section>
         <!-- Kit Churrasco (Banner) -->
-        <section class='banner-kit-churrasco'>
+        <section id="banner-kit-churrasco" class='banner-kit-churrasco'>
           <img src="/Img/BannerKitChurrasco.jpg" alt="Espetos de carne na grelha">
           <div class="titulo-banner">
             <h1>kit churrasco</h1>
@@ -174,14 +176,14 @@
         </section>
         
         <!-- Vídeo -->
-        <div class="video-container container">
+        <section id="video" class="video-container container">
           <h2>Assista nosso vídeo</h2>
            <div class="video">
             <video controls="" width="100%">
               <source src="Video/Video_Espetinho.mp4" type="video/mp4">
             </video>
            </div>
-         </div>
+         </section>
         <!-- Seja um revendedor -->
 
         <!-- vLibras -->
@@ -193,6 +195,39 @@
         </div>
     </main>
     <footer>
+      <div class="nos-conheca">
+        <h2>Nos Conheça</h2>
+        <div class="links">
+          <div class="group">
+            <a href="#nossos-expetinhos">Nossos Espetinhos</a>
+            <a href="#form-pedido-container">Faça Seu Pedido</a>
+          </div>
+          <div class="group">
+            <a href="#banner-kit-churrasco">KIT Churrasco</a>
+            <a href="#video">Assista o Vídeo</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="siga-nos">
+        <h2>Siga-nos</h2>
+        <div class="rede-social">
+          <img src="Img/Icones/instagram.svg" alt="Ícone da rede social Instagram">
+          <a href="#">@Expetinho</a>
+        </div>
+        <div class="rede-social">
+          <img src="Img/Icones/linkedin.svg" alt="Ícone da rede social Linkedin">
+          <a href="#">Expetinho</a>
+        </div>
+        <div class="rede-social">
+          <img src="Img/Icones/phone.svg" alt="Número de Telefone">
+          <a href="#">(15)99157-2525l</a>
+        </div>
+        <div class="rede-social">
+          <img src="Img/Icones/mail.svg" alt="Email da empresa">
+          <a href="#">expetinho@gmail.com</a>
+        </div>
+      </div>
     </footer>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>

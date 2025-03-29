@@ -22,6 +22,8 @@ opcaoFrangoInput.addEventListener("input", alterarResumo);
 opcaoLegumeInput.addEventListener("input", alterarResumo);
 opcaoLinguicaInput.addEventListener("input", alterarResumo);
 
+let estado = false;
+
 const valorCarne = 10.00
 const valorFrango = 10.00
 const valorLegume = 10.00
@@ -43,6 +45,9 @@ document.addEventListener("keydown", function (event) {
                 break;
             case "4":
                 window.location.href = "#form-pedido-container"; 
+                break;
+            case "5":
+                alternarEstadoLeitura();
                 break;
         }
     }
@@ -66,6 +71,35 @@ function alterarResumo() {
     
 }
 
-function calcularPreco(){
-    
+function alternarEstadoLeitura() {
+    botao = document.querySelector("button[class='botao-flutuante']");
+    estado = !estado
+    let atalho = "(ALt+5)";
+    if(!estado){
+        pararLeitura();
+        botao.innerHTML = "Ouvir Página" + atalho;
+
+    }
+    else{
+        lerPagina();
+        botao.innerHTML = "Parar Leitura" + atalho;
+    }
 }
+
+let fala;
+    function lerPagina(){
+        let texto = document.body.innerText;
+        fala = new SpeechSynthesisUtterance(texto);
+        fala.lang ="pt-BR"
+        speechSynthesis.speak(fala);
+        
+    }
+    function pararLeitura(){
+        speechSynthesis.cancel();
+    }
+
+    
+function trocaCor(){
+    document.documentElement.classList.toggle("modo-preto-branco");
+}
+
