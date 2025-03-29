@@ -72,6 +72,9 @@ header{
     background-color: #FFFFFF;
     font-weight: bold;
     font-family: var(--fonte-principal);
+    position: sticky;
+    z-index: 999;
+    top: 0;
 }
 
 /*tamanho fixo do logo no cabeeçalho*/
@@ -81,7 +84,7 @@ header img{
 
 /*tamanho máximo da parte dos textos cabeçalho*/
 nav{
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 /*alinhamento dos textos do cabeçalho*/
@@ -161,6 +164,8 @@ nav ul li a:hover {
 .nossos-espetinhos .cardapio{
     display: flex;
     flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-radius: 18px;
     width: 100%;
     height: 90%;

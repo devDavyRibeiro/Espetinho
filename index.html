@@ -14,13 +14,12 @@
         <nav class="navbar">
             <div class="nav-list" id="nav-list">
               <ul>
-                <li class="nav-item"><a href="#">Início</a></li>
-                <li class="nav-item"><a href="#nossos-expetinhos">Espetinhos</a></li>
-                <li class="nav-item" ><a href="#banner-kit-churrasco">Kit churrasco</a></li>
-                <li class="nav-item"><a href="#form-pedido-container">Pedidos</a></li>
+                <li class="nav-item"><a href="#">Início(Alt+1)</a></li>
+                <li class="nav-item"><a href="#nossos-expetinhos">Espetinhos (Alt+2)</a></li>
+                <li class="nav-item" ><a href="#banner-kit-churrasco">Kit churrasco(Alt+3)</a></li>
+                <li class="nav-item"><a href="#form-pedido-container">Pedidos(Alt+4)</a></li>
                 <li><button onclick="trocaCor()" class="botao-preto-branco">Modo preto e branco</button></li>
-                <li><button class="botao-flutuante" onclick="lerPagina()">Ouvir Página</button></li>
-                <li><button class="botao-flutuante botao-parar" onclick="pararLeitura()">Parar leitura</button></li>
+                <li><button class="botao-flutuante" onclick="alternarEstadoLeitura()">Ouvir Página(Alt+5)</button></li>
               </ul>
             </div>
           </nav>
@@ -29,8 +28,8 @@
     <section id="banner-inicial" class='banner'>
       <img src="/Img/BannerEspetinho.jpg" alt="imagem de churrasco na grelha">
       <div class="titulo-banner">
-        <h1> O melhor espetinho que você irá comer! </h1>
-    </div>
+          <h1> O melhor espetinho que você irá comer! </h1>
+      </div>
       <!-- Banner -->
     </section> 
     <main>
@@ -41,22 +40,22 @@
             <div class="produto">
               <span>Carne Bovina</span>
               <hr>
-              <span class="preco">R$4,00</span>
+              <span class="preco" id="preco-carne">R$4,00</span>
             </div>
             <div class="produto">
               <span>Frango</span>
               <hr>
-              <span class="preco">R$3,00</span>
+              <span class="preco" id="preco-frango">R$3,00</span>
             </div>
             <div class="produto">
               <span>Linguiça</span>
               <hr>
-              <span class="preco">R$3,50</span>
+              <span class="preco" id="preco-linguica">R$3,50</span>
             </div>
             <div class="produto">
               <span>Legumes</span>
               <hr>
-              <span class="preco">R$2,50</span>
+              <span class="preco" id="preco-legume">R$2,50</span>
         
             </div>
           </div>
@@ -178,12 +177,14 @@
         
         <!-- Vídeo -->
         <section id="video" class="video-container container">
+        <section id="video" class="video-container container">
           <h2>Assista nosso vídeo</h2>
            <div class="video">
-            <video controls="" width="100%">
-              <source src="Video/Video1.mp4" type="video/mp4">
+            <video onplay="interromperLeituraParaVideo()" controls="" width="100%">
+              <source src="Video/Video_Espetinho.mp4" type="video/mp4">
             </video>
            </div>
+         </section>
          </section>
         <!-- Seja um revendedor -->
 
@@ -204,7 +205,7 @@
             <a href="#form-pedido-container">Faça Seu Pedido</a>
           </div>
           <div class="group">
-            <a href="#banner-kit-churrasco">KIT Chucarrasco</a>
+            <a href="#banner-kit-churrasco">KIT Churrasco</a>
             <a href="#video">Assista o Vídeo</a>
           </div>
         </div>
