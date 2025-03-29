@@ -14,12 +14,12 @@
         <nav class="navbar">
             <div class="nav-list" id="nav-list">
               <ul>
-                <li class="nav-item"><a>Início</a></li>
-                <li class="nav-item"><a>Espetinhos</a></li>
-                <li class="nav-item" ><a>Kit churrasco</a></li>
-                <li class="nav-item"><a>Pedidos</a></li>
-                <li><button class="botao-flutuante" onclick="lerPagina()">Ouvir Página</button></li>
-                <li><button class="botao-flutuante botao-parar" onclick="pararLeitura()">Parar leitura</button></li>
+                <li class="nav-item"><a href="#">Início(Alt+1)</a></li>
+                <li class="nav-item"><a href="#nossos-expetinhos">Espetinhos (Alt+2)</a></li>
+                <li class="nav-item" ><a href="#banner-kit-churrasco">Kit churrasco(Alt+3)</a></li>
+                <li class="nav-item"><a href="#form-pedido-container">Pedidos(Alt+4)</a></li>
+                <li><button onclick="trocaCor()" class="botao-preto-branco">Modo preto e branco</button></li>
+                <li><button class="botao-flutuante" onclick="alternarEstadoLeitura()">Ouvir Página(Alt+5)</button></li>
               </ul>
             </div>
           </nav>
@@ -28,40 +28,40 @@
     <section id="banner-inicial" class='banner'>
       <img src="/Img/BannerEspetinho.jpg" alt="imagem de churrasco na grelha">
       <div class="titulo-banner">
-        <h1> O melhor espetinho que você irá comer! </h1>
-    </div>
+          <h1> O melhor espetinho que você irá comer! </h1>
+      </div>
       <!-- Banner -->
     </section> 
     <main>
         <!-- Nossos Espetinhos  -->
-        <section class="nossos-espetinhos container">
-          <h2>Nossos Espetinhos</h2>
+        <section id="nossos-expetinhos" class="nossos-espetinhos container">
+          <h2>Nossos Expetinhos</h2>
           <div class="cardapio">
             <div class="produto">
               <span>Carne Bovina</span>
               <hr>
-              <span class="preco">R$10,00</span>
+              <span class="preco" id="preco-carne">R$4,00</span>
             </div>
             <div class="produto">
               <span>Frango</span>
               <hr>
-              <span class="preco">R$10,00</span>
+              <span class="preco" id="preco-frango">R$3,00</span>
             </div>
             <div class="produto">
               <span>Linguiça</span>
               <hr>
-              <span class="preco">R$10,00</span>
+              <span class="preco" id="preco-linguica">R$3,50</span>
             </div>
             <div class="produto">
               <span>Legumes</span>
               <hr>
-              <span class="preco">R$10,00</span>
+              <span class="preco" id="preco-legume">R$2,50</span>
         
             </div>
           </div>
         </section>
         <!-- Kit Churrasco (Banner) -->
-        <section class='banner-kit-churrasco'>
+        <section id="banner-kit-churrasco" class='banner-kit-churrasco'>
           <img src="/Img/BannerKitChurrasco.jpg" alt="Espetos de carne na grelha">
           <div class="titulo-banner">
             <h1>kit churrasco</h1>
@@ -83,18 +83,18 @@
                       <li><img src="/Img/chama.png" alt="chama">10 espetos de linguiça;</li>
                       <li><img src="/Img/chama.png" alt="chama">5 espetos de legumes;</li>
                   </ul>
-                  <p>R$ 150,00</p>
+                  <p>R$ 155,00</p>
                 </div> <!--missao box-->
                 <div class="opcoes-box">
                     <h4> Kit churrasco </h4>
                     <h3>10 pessoas</h3>
                     <ul> 
-                      <li><img src="/Img/chama.png" alt="chama">30 espetos de carne; </li>
-                      <li><img src="/Img/chama.png" alt="chama">10 espetos de frango;</li>
-                      <li><img src="/Img/chama.png" alt="chama">20 espetos de linguiça;</li>
-                      <li><img src="/Img/chama.png" alt="chama">10 espetos de legumes;</li>
+                      <li><img src="/Img/chama.png" alt="chama">35 espetos de carne; </li>
+                      <li><img src="/Img/chama.png" alt="chama">15 espetos de frango;</li>
+                      <li><img src="/Img/chama.png" alt="chama">15 espetos de linguiça;</li>
+                      <li><img src="/Img/chama.png" alt="chama">5 espetos de legumes;</li>
                   </ul>
-                  <p>R$ 210,00</p>
+                  <p>R$ 215,00</p>
                 </div> <!--visao box-->
                 <div class="opcoes-box"> 
                     <h4> Kit churrasco </h4>
@@ -105,7 +105,7 @@
                       <li><img src="/Img/chama.png" alt="chama">30 espetos de linguiça;</li>
                       <li><img src="/Img/chama.png" alt="chama">10 espetos de legumes;</li>
                     </ul>
-                    <p>R$ 350,00</p>
+                    <p>R$ 380,00</p>
                 </div> 
             </div> 
         </div>
@@ -176,14 +176,16 @@
         </section>
         
         <!-- Vídeo -->
-        <div class="video-container container">
+        <section id="video" class="video-container container">
+        <section id="video" class="video-container container">
           <h2>Assista nosso vídeo</h2>
            <div class="video">
-            <video controls="" width="100%">
-              <source src="Video/Video1.mp4" type="video/mp4">
+            <video onplay="interromperLeituraParaVideo()" controls="" width="100%">
+              <source src="Video/Video_Espetinho.mp4" type="video/mp4">
             </video>
            </div>
-         </div>
+         </section>
+         </section>
         <!-- Seja um revendedor -->
 
         <!-- vLibras -->
@@ -195,6 +197,39 @@
         </div>
     </main>
     <footer>
+      <div class="nos-conheca">
+        <h2>Nos Conheça</h2>
+        <div class="links">
+          <div class="group">
+            <a href="#nossos-expetinhos">Nossos Espetinhos</a>
+            <a href="#form-pedido-container">Faça Seu Pedido</a>
+          </div>
+          <div class="group">
+            <a href="#banner-kit-churrasco">KIT Churrasco</a>
+            <a href="#video">Assista o Vídeo</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="siga-nos">
+        <h2>Siga-nos</h2>
+        <div class="rede-social">
+          <img src="Img/Icones/instagram.svg" alt="Ícone da rede social Instagram">
+          <a href="#">@Expetinho</a>
+        </div>
+        <div class="rede-social">
+          <img src="Img/Icones/linkedin.svg" alt="Ícone da rede social Linkedin">
+          <a href="#">Expetinho</a>
+        </div>
+        <div class="rede-social">
+          <img src="Img/Icones/phone.svg" alt="Número de Telefone">
+          <a href="#">(15)99157-2525l</a>
+        </div>
+        <div class="rede-social">
+          <img src="Img/Icones/mail.svg" alt="Email da empresa">
+          <a href="#">expetinho@gmail.com</a>
+        </div>
+      </div>
     </footer>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>

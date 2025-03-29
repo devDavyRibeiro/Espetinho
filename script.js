@@ -22,24 +22,32 @@ opcaoFrangoInput.addEventListener("input", alterarResumo);
 opcaoLegumeInput.addEventListener("input", alterarResumo);
 opcaoLinguicaInput.addEventListener("input", alterarResumo);
 
-const valorCarne = 10.00
-const valorFrango = 10.00
-const valorLegume = 10.00
-const valorLinguica = 10.00
+let estado = false;
+
+const valorCarne = 4.00
+const valorFrango = 3.00
+const valorLegume = 2.50
+const valorLinguica = 3.50
 
 let preco
 
 document.addEventListener("keydown", function (event) {
     if (event.altKey) {
         switch (event.key) {
-            case "h":
+            case "1":
                 window.location.href = "#banner-inicial";
                 break;
-            case "p":
+            case "2":
+                window.location.href = "#nossos-espetinhos"; 
+                break;
+            case "3":
+                window.location.href = "#kit-churrasco"; 
+                break;
+            case "4":
                 window.location.href = "#form-pedido-container"; 
                 break;
-            case "k":
-                window.location.href = "#kit-churrasco"; 
+            case "5":
+                alternarEstadoLeitura();
                 break;
         }
     }
@@ -63,17 +71,40 @@ function alterarResumo() {
     
 }
 
-function calcularPreco(){
-    
+function alternarEstadoLeitura() {
+    estado = !estado
+    if(!estado){
+        pararLeitura();
+    }
+    else{
+        lerPagina();
+    }
 }
 
 let fala;
-    function lerPagina(){
-        let texto = document.body.innerText;
-        fala = new SpeechSynthesisUtterance(texto);
-        fala.lang ="pt-BR"
-        speechSynthesis.speak(fala);
-    }
-    function pararLeitura(){
-        speechSynthesis.cancel();
-    }
+let botaoFala = document.querySelector("button[class='botao-flutuante']");
+
+let atalho = "(Alt+5)";
+
+function lerPagina(){
+    let texto = document.body.innerText;
+    fala = new SpeechSynthesisUtterance(texto);
+    fala.lang ="pt-BR"
+    botaoFala.innerHTML = "Parar Leitura" + atalho;
+    speechSynthesis.speak(fala);
+}
+function pararLeitura(){
+    botaoFala.innerHTML = "Ouvir Página" + atalho;
+    speechSynthesis.cancel();
+}
+
+function interromperLeituraParaVideo(){
+    if(estado)
+        estado = !estado;
+    pararLeitura()
+}
+    
+function trocaCor(){
+    document.documentElement.classList.toggle("modo-preto-branco");
+}
+

@@ -72,6 +72,9 @@ header{
     background-color: #FFFFFF;
     font-weight: bold;
     font-family: var(--fonte-principal);
+    position: sticky;
+    z-index: 999;
+    top: 0;
 }
 
 /*tamanho fixo do logo no cabeeçalho*/
@@ -81,7 +84,7 @@ header img{
 
 /*tamanho máximo da parte dos textos cabeçalho*/
 nav{
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 /*alinhamento dos textos do cabeçalho*/
@@ -144,6 +147,7 @@ nav ul li a:hover {
 /* *** Preços *** */
 
 .nossos-espetinhos{
+    padding-bottom: 50px;
     background-color: var(--primary-color);
     min-height: 300px;
     width: auto;
@@ -160,6 +164,8 @@ nav ul li a:hover {
 .nossos-espetinhos .cardapio{
     display: flex;
     flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-radius: 18px;
     width: 100%;
     height: 90%;
@@ -167,6 +173,7 @@ nav ul li a:hover {
     gap: 25px;
     font-size: 20px;
     align-items: center;
+    font-weight: bold;
 }
 .nossos-espetinhos .cardapio .produto{
     width: 90% ;
@@ -448,21 +455,85 @@ nav ul li a:hover {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: rgb(54, 70, 246);
+    background-color: #3486e6;
     color: white;
     border: none;
     padding: 15px 20px;
     border-radius: 50px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
     font-size: 16px;
-    z-index: 1000;
 }
 
 .botao-parar {
     bottom: 80px; 
-    background-color: rgb(54, 70, 246);;
+    background-color: #3486e6;;
 }
 
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px;
+    min-height: 226px;
+    background-color: var(--primary-color);
+    color: var(--fonte-cor-principal);
+}
+footer .nos-conheca, footer .siga-nos{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+footer .nos-conheca .links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 50px;
+}
+footer .nos-conheca .links .group{
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+footer a{
+    color: var(--fonte-cor-principal);
+    text-decoration: none;
+    font-weight:bold ;
+    font-size: 20px;
+    transition: 0.5s;
+}
+footer a:hover{
+    text-decoration: underline;
+    transform: scale(1.09);
+}
+footer .siga-nos{
+    flex-grow: .4;
+}
+footer h2{
+    text-align: center;
+    padding-bottom: 20px;
+}
+footer .rede-social{
+    padding-left: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+footer img{
+    width: 32px;
+}
 
+.modo-preto-branco {
+    filter: grayscale(100%);
+}
 
+.botao-preto-branco{
+    font-weight: bold;
+    font-family: var(--fonte-principal);
+    border-radius: 2px;
+    bottom: 10px;
+    background-color: rgba(177, 173, 173, 0.797);
+    border: none;
+    padding: 2px 15px
+}
